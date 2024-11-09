@@ -1,0 +1,128 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c44);
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Main resume container with animated gradient border */
+  .resume {
+    width: 90%;
+    max-width: 600px;
+    background-color: #23233a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, #00ff9d, #00c9ff, #ff4c8d);
+    animation: gradientBorder 3s infinite linear;
+  }
+  
+  /* Animated gradient border effect */
+  @keyframes gradientBorder {
+    0%, 100% { border-image-source: linear-gradient(135deg, #00ff9d, #00c9ff, #ff4c8d); }
+    50% { border-image-source: linear-gradient(135deg, #ff4c8d, #00c9ff, #00ff9d); }
+  }
+  
+  /* Profile picture with gradient border and round shape */
+  .profile-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Perfectly round */
+    border: 4px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, #00ff9d, #00c9ff, #ff4c8d);
+    animation: gradientBorder 3s infinite linear;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Centered and animated headings in rectangular boxes */
+  h1, h2 {
+    color: #00ff9d;
+    text-align: center;
+    padding: 8px 20px;
+    background-color: #1e1e2f;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 3px solid; /* Uniform border size for all headings */
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, #00ff9d, #00c9ff, #ff4c8d);
+    animation: gradientBorder 3s infinite linear;
+    display: inline-block;
+    font-size: 1.5em; /* Make heading text smaller */
+  }
+  
+  /* Section styling with light background and rounded corners */
+  .resume-section {
+    background: rgba(34, 34, 51, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 150px; /* Make sections uniform in size */
+  }
+  
+  /* Uniform box sizes for all sections */
+  .resume-section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .resume-section ul li {
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 6px 0;
+    border-radius: 6px;
+    color: #b0ffb0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .resume-section ul li::before {
+    content: "•";
+    margin-right: 10px;
+    color: #00b300;
+    font-size: 1.5em;
+  }
+  
+  /* Toggle Button styling with gradient animation */
+  button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00ff9d, #00c9ff, #ff4c8d);
+    color: #fff;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
